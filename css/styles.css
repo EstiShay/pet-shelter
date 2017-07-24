@@ -27,6 +27,7 @@ body {
 .jumbotron {
   text-align: center;
   background: inherit;
+  border-bottom: 4px solid #6d583f;
 }
 .panel-heading {
   background: #d8c1a6;
