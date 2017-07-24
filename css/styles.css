@@ -1,0 +1,13 @@
+img {
+  height: 200px;
+  width: 300px;
+}
+.panel-heading {
+  text-align: center;
+}
+.panel-body {
+  text-align: center;
+}
+.form-group {
+  width: 50%;
+}

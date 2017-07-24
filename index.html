@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.2.1.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Animal Shelter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Local Animal Shelter</h1>
+        <h3>The best animals come from our shelter! Check them out below!</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Bunny</h4>
+            </div>
+            <div class="panel-body">
+              <img src="img/doodle.jpg" alt="labradoodle">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Richard III</h4>
+            </div>
+            <div class="panel-body">
+              <img src="img/richard.jpg" alt="mini australian shepard">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Grumpy</h4>
+            </div>
+            <div class="panel-body">
+              <img src="img/grumpy.png" alt="exotic shorthair">
+            </div>
+          </div>
+        </div>
+      </div><!--row-->
+      <div class="row">
+        <form id="animalinput">
+          <div class="form-group">
+            <label for="name">Enter Animal Name:</label>
+            <input type="text" id="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="age">Enter Age of Animal:</label>
+            <input type="text" id="age" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="animaltype">Enter Animal Name:</label>
+            <input type="text" id="animaltype" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="picture">Enter Animal Name:</label>
+            <input type="text" id="picture" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Add animal to adoption list!</button>
+        </form>
+
+      </div> <!--row-->
+
+    </div>
+  </body>
+</html>
