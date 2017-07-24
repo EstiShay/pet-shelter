@@ -1,12 +1,11 @@
 img {
-  height: 200px;
+  height: 250px;
   width: 300px;
-}
-.panel-heading {
-  text-align: center;
 }
 .panel-body {
   text-align: center;
+  background: #dbb78e;
+  border: 2px solid #6d583f;
 }
 .form-group {
   width: 50%;
@@ -15,4 +14,22 @@ img {
   display:grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 10px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  text-align: center;
+  background: inherit;
+}
+.panel-heading {
+  background: #d8c1a6;
+  border: 2px solid #6d583f;
+  text-align: center;
 }
