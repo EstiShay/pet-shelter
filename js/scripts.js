@@ -49,7 +49,7 @@ $(document).ready(function() {
 
     var newPet = new Pet(nameInput, picInput, ageInput, animalTypeInput);
 
-    $(".wrapper").append('<div class="panel panel-default">' +
+    $(".wrapper").append('<div class="panel panel">' +
       '<div class="panel-heading">' +
         '<h4>' + newPet.petName + '</h4>' +
       '</div>' +
