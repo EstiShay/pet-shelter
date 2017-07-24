@@ -55,18 +55,27 @@ $(document).ready(function() {
       '</div>' +
       '<div class="panel-body">' +
         '<img src="' + newPet.petPic + '" alt="' + newPet.animalType + '">' +
-        '<p class="detail-reveal">Details</p>' +
-        '<div class="details">' +
-          '<p>Age: ' + newPet.age + '</p>' +
-          '<p>Animal: ' + newPet.animalType + '</p>' +
+        '<div class="detail-reveal">' +
+          '<p>Details</p>' +
+          '<div class="details">' +
+            '<p>Age: ' + newPet.age + '</p>' +
+            '<p>Animal: ' + newPet.animalType + '</p>' +
+            '<p class="hide-details">Hide</p>' +
+          '</div>' +
         '</div>' +
       '</div>' +
     '</div>');
 
-    $(".detail-reveal").click(function() {
-      $(".details").show();
+    $(".detail-reveal").click(function(event) {
+      $(this).children(".details").show();
       event.preventDefault();
     });
+
+    // $(".hide-details").click(function(event) {
+    //   $(this).parents(".details").hide();
+    //   event.preventDefault();
+    // });
+
 
     event.preventDefault();
   });
