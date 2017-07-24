@@ -45,7 +45,7 @@ $(document).ready(function() {
     var nameInput = $("input#name").val();
     var picInput = $("input#picture").val();
     var ageInput = parseInt($("input#age").val());
-    var animalTypeInput = $("input#animalType").val();
+    var animalTypeInput = $("input#animaltype").val();
 
     var newPet = new Pet(nameInput, picInput, ageInput, animalTypeInput);
 
