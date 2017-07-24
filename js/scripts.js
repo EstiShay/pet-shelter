@@ -55,10 +55,21 @@ $(document).ready(function() {
       '</div>' +
       '<div class="panel-body">' +
         '<img src="' + newPet.petPic + '" alt="' + newPet.animalType + '">' +
+        '<p class="detail-reveal">Details</p>' +
+        '<div class="details">' +
+          '<p>Age: ' + newPet.age + '</p>' +
+          '<p>Animal: ' + newPet.animalType + '</p>' +
+        '</div>' +
       '</div>' +
     '</div>');
 
+    $(".detail-reveal").click(function() {
+      $(".details").show();
+      event.preventDefault();
+    });
 
     event.preventDefault();
   });
+
+
 });
