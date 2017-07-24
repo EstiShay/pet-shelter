@@ -49,10 +49,15 @@ $(document).ready(function() {
 
     var newPet = new Pet(nameInput, picInput, ageInput, animalTypeInput);
 
-    $("#animaloutput").append(newPet.petName);
-    $("#animaloutput").append(newPet.petPic);
-    $("#animaloutput").append(newPet.age);
-    $("#animaloutput").append(newPet.animalType);
+    $(".wrapper").append('<div class="panel panel-default">' +
+      '<div class="panel-heading">' +
+        '<h4>' + newPet.petName + '</h4>' +
+      '</div>' +
+      '<div class="panel-body">' +
+        '<img src="' + newPet.petPic + '" alt="' + newPet.animalType + '">' +
+      '</div>' +
+    '</div>');
+
 
     event.preventDefault();
   });
