@@ -60,7 +60,7 @@ $(document).ready(function() {
           '<div class="details">' +
             '<p>Age: ' + newPet.age + '</p>' +
             '<p>Animal: ' + newPet.animalType + '</p>' +
-            '<p class="hide-details">Hide</p>' +
+            // '<p class="hide-details">Hide</p>' +
           '</div>' +
         '</div>' +
       '</div>' +
