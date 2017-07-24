@@ -5,7 +5,7 @@ function Pet (petName, petPic, age, animalType) {
   this.petPic = petPic;
   this.age = age;
   this.animalType = animalType;
-  this.adoptionStatus = true;
+  this.adoptionStatus = false;
 }
 
 // //adoptionStatus will be reset using checkbox on details display
@@ -13,10 +13,10 @@ function Pet (petName, petPic, age, animalType) {
 //   this.adoptionStatus = newStatus;
 // }
 //
-// //Push individual pets to this array
-// function Shelter() {
-//   this.pets = [];
-// }
+//Push individual pets to this array
+function Shelter() {
+  this.pets = [];
+}
 //
 // Shelter.prototype.filterAdopted = function() {
 //   adoptedPets = [];
@@ -41,6 +41,8 @@ function Pet (petName, petPic, age, animalType) {
 //UI logic
 $(document).ready(function() {
 
+  var newShelter = new Shelter();
+
   $("#animalinput").submit(function(event) {
     var nameInput = $("input#name").val();
     var picInput = $("input#picture").val();
@@ -48,6 +50,11 @@ $(document).ready(function() {
     var animalTypeInput = $("input#animaltype").val();
 
     var newPet = new Pet(nameInput, picInput, ageInput, animalTypeInput);
+    console.log(newPet);
+    console.log(newShelter);
+    console.log(newShelter.pets);
+    newShelter.pets.push(newPet);
+    console.log(newShelter.pets);
 
     $(".wrapper").append('<div class="panel panel">' +
       '<div class="panel-heading">' +
@@ -60,23 +67,31 @@ $(document).ready(function() {
           '<div class="details">' +
             '<p>Age: ' + newPet.age + '</p>' +
             '<p>Animal: ' + newPet.animalType + '</p>' +
-            // '<p class="hide-details">Hide</p>' +
+          // '<p class="hide-details">Hide</p>' +
           '</div>' +
         '</div>' +
+          '<input class="adopt-button" type="button" name="adoption-status" value="Adopt Me">' +
       '</div>' +
     '</div>');
+
+    $(".adopt-button").click(function(event) {
+      this.adoptionStatus = true;
+    });
 
     $(".detail-reveal").click(function(event) {
       $(this).children(".details").show();
       event.preventDefault();
     });
-
+    //
     // $(".hide-details").click(function(event) {
-    //   $(this).parents(".details").hide();
+    //   $(this).siblings().hide();
     //   event.preventDefault();
     // });
 
-
+    $("input#name").val('');
+    $("input#picture").val('');
+    $("input#age").val('');
+    $("input#animaltype").val('');
     event.preventDefault();
   });
 
